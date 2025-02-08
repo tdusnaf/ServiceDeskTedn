@@ -1,0 +1,7 @@
+ID;createdAt;createdBy;modifiedAt;modifiedBy;Motivo;Estado_code;TipoSolicitud_code;Urgencia_code;PersonaSoporte_ID;Usuario
+88d60bda-64a4-4879-b57f-f455bbc65fa3;2025-02-08T10:20:12+0100;createdBy6786;2025-02-08T10:20:12+0100;modifiedBy9130;Motivo de prueba;N;Doc;H;;Usuario8619
+d928bec5-5076-4010-b09b-fd94dbf02c4f;2025-02-08T10:20:53+0100;createdBy570;2025-02-08T10:20:53+0100;modifiedBy4774;Motivo7211;A;Inc;L;;Usuario1812
+2816c0af-8ee1-4790-849d-de90e3ed52e3;2025-02-08T10:20:54+0100;createdBy9271;2025-02-08T10:20:54+0100;modifiedBy4240;Motivo329;I;Doc;H;;Usuario6389
+17b59653-344d-42ba-b8c4-e9cf0405154e;2025-02-08T11:19:55+0100;createdBy5113;2025-02-08T11:19:55+0100;modifiedBy1028;Motivo4479;H;Sup;M;;Usuario5055
+d553ff41-c26a-4579-a8f6-7ff6ceceb929;2025-02-08T11:20:06+0100;createdBy3071;2025-02-08T11:20:06+0100;modifiedBy314;Motivo2459;R;Doc;L;;Usuario9494
+bf29aaae-d57d-4407-94f8-7ab372cf8b34;2025-02-08T11:20:33+0100;createdBy5773;2025-02-08T11:20:33+0100;modifiedBy2929;Motivo2320;C;Inc;M;;Usuario5256

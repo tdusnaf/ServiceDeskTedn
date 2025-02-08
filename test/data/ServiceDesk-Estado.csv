@@ -1,0 +1,7 @@
+code;descr;criticality;name
+N;Nuevo;5;
+A;Asignado;3;
+I;En Proceso;3;
+H;En Espera;1;
+R;Resuelto;3;
+C;Cerrado;0;
