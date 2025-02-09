@@ -13,7 +13,7 @@ entity Solicitudes : cuid, managed
     key ID : UUID;
     Motivo : String(100);
     Estado : Association to one Estado default 'N';
-    TipoSolicitud : Association to one TipoSolicitud;
+    TipoSolicitud : Association to one TiposSolicitud;
     Urgencia : Association to one Urgencia default 'M';
     PersonaSoporte : Association to one PersonaSoporte;
     Usuario : type of managed:createdBy;
@@ -27,17 +27,16 @@ entity Solicitudes : cuid, managed
 
 entity PersonaSoporte
 {
+    key ID : UUID;
+    Nombre : String(100);
     Apellido1 : String(100);
     Apellido2 : String(100);
-    Nombre : String(100);
-    key ID : UUID;
     Solicitudes : Association to many Solicitudes on Solicitudes.PersonaSoporte = $self;
 }
 
-//Revisar UI para ver si funciona correctamente
-entity TipoSolicitud {
-    key code: String;
-    description: String;   // Descripción de cada tipo de solicitud
+entity TiposSolicitud {
+    key code: String ;
+    description: String; 
 }
 
 entity Estado : CodeList {

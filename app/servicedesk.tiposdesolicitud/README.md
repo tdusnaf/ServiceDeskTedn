@@ -1,33 +1,32 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Sat Feb 08 2025 09:09:12 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Sat Feb 08 2025 18:34:16 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>@sap/generator-fiori-elements|
 |**App Generator Version**<br>1.16.3|
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>List Report Page V4|
 |**Service Type**<br>Local Cap|
 |**Service URL**<br>http://localhost:4004/service/ServiceDeskSvcs/|
-|**Module Name**<br>servicedesk.solicutides|
-|**Application Title**<br>Solicutides|
+|**Module Name**<br>servicedesk.tiposdesolicitud|
+|**Application Title**<br>Tipos de Solicitud|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.120.13|
 |**Enable Code Assist Libraries**<br>False|
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
-|**Main Entity**<br>Solicitudes|
-|**Navigation Entity**<br>Comunicaciones|
+|**Main Entity**<br>Tipos_solicitud|
 
-## servicedesk.solicutides
+## servicedesk.tiposdesolicitud
 
-Gestión de solicitudes
+Gestión de Tipos
 
 ### Starting the generated app
 
 -   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  In order to launch the generated app, simply start your CAP project and navigate to the following location in your browser:
 
-http://localhost:4004/servicedesk.solicutides/webapp/index.html
+http://localhost:4004/servicedesk.tiposdesolicitud/webapp/index.html
 
 #### Pre-requisites:
 

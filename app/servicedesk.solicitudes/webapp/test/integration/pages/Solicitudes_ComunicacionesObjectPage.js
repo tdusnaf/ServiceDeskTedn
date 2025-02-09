@@ -8,7 +8,7 @@ sap.ui.define(['sap/fe/test/ObjectPage'], function(ObjectPage) {
 
     return new ObjectPage(
         {
-            appId: 'servicedesk.solicutides',
+            appId: 'servicedesk.solicitudes',
             componentId: 'Solicitudes_ComunicacionesObjectPage',
             contextPath: '/Solicitudes/Comunicaciones'
         },

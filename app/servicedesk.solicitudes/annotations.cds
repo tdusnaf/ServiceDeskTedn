@@ -10,17 +10,17 @@ annotate service.Solicitudes with @(
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'Estado_code',
+                Label : '{i18n>Estadocode}',
                 Value : Estado_code,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'TipoSolicitud_code',
+                Label : '{i18n>Tiposolicitudcode}',
                 Value : TipoSolicitud_code,
             },
             {
                 $Type : 'UI.DataField',
-                Label : 'Urgencia_code',
+                Label : '{i18n>Urgenciacode1}',
                 Value : Urgencia_code,
             },
             {
@@ -46,6 +46,15 @@ annotate service.Solicitudes with @(
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
+            Value : ID,
+            Label : 'ID',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : createdAt,
+        },
+        {
+            $Type : 'UI.DataField',
             Label : 'Motivo',
             Value : Motivo,
         },
@@ -69,6 +78,11 @@ annotate service.Solicitudes with @(
         },
         {
             $Type : 'UI.DataField',
+            Value : Comunicaciones.Mensaje,
+            Label : '{i18n>Mensajes}',
+        },
+        {
+            $Type : 'UI.DataField',
             Value : Usuario,
         },
     ],
@@ -77,23 +91,41 @@ annotate service.Solicitudes with @(
         TipoSolicitud_code,
         Estado_code,
     ],
+    UI.HeaderInfo : {
+        TypeName : 'Solicitud',
+        TypeNamePlural : 'Solicitudes',
+        Title : {
+            $Type : 'UI.DataField',
+            Value : Motivo,
+        },
+        Description : {
+            $Type : 'UI.DataField',
+            Value : ID,
+        },
+        TypeImageUrl : 'sap-icon://message-warning',
+    },
 );
 
 annotate service.Solicitudes with {
     TipoSolicitud @(
         Common.ValueList : {
         $Type : 'Common.ValueListType',
-        CollectionPath : 'Tipo_solicitud',
+        CollectionPath : 'Tipos_solicitud',
         Parameters : [
             {
                 $Type : 'Common.ValueListParameterInOut',
                 LocalDataProperty : TipoSolicitud_code,
                 ValueListProperty : 'code',
             },
+            {
+                $Type : 'Common.ValueListParameterDisplayOnly',
+                ValueListProperty : 'description',
+            },
         ],
     },
         Common.ValueListWithFixedValues : true,
         Common.Label : '{i18n>Tiposolicitud}',
+        Common.Text : TipoSolicitud.description,
     )
 };
 
@@ -101,30 +133,25 @@ annotate service.Solicitudes with {
     Urgencia @(
         Common.ValueListWithFixedValues : true,
         Common.Label : '{i18n>Urgencia}',
-    )
-};
-
-annotate service.Urgencia with {
-    code @Common.Text : {
-        $value : descr,
-        ![@UI.TextArrangement] : #TextOnly
-    }
+        Common.Text : Urgencia.descr,
+        )
 };
 
 annotate service.Solicitudes with {
     Estado @(
         Common.ValueListWithFixedValues : true,
         Common.Label : '{i18n>Estado}',
+        Common.Text : Estado.descr,
         )
 };
 
 annotate service.Estado with {
     code @(
+        Common.Label : 'Estado/code',
         Common.Text : {
             $value : descr,
-            ![@UI.TextArrangement] : #TextFirst
+            ![@UI.TextArrangement] : #TextOnly,
         },
-        Common.Label : 'Estado/code',
     )
 };
 
@@ -186,4 +213,10 @@ annotate service.Estado with {
         },
         Common.ValueListWithFixedValues : true
 )};
+annotate service.Urgencia with {
+    code @Common.Text : {
+        $value : descr,
+        ![@UI.TextArrangement] : #TextOnly
+    }
+};
 

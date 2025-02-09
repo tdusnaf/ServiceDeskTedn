@@ -1,7 +1,7 @@
 {
   "_version": "1.60.0",
   "sap.app": {
-    "id": "servicedesk.solicutides",
+    "id": "servicedesk.solicitudes",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.16.3",
-      "toolsId": "3121e6c1-3f08-4377-949f-0e1485f83f66"
+      "toolsId": "719f70f2-a424-4d8f-9326-147d5e39f6bd"
     },
     "dataSources": {
       "mainService": {
@@ -27,8 +27,8 @@
     },
     "crossNavigation": {
       "inbounds": {
-        "servicedesksolicutides-display": {
-          "semanticObject": "servicedesksolicutides",
+        "servicedesksolicitudes-display": {
+          "semanticObject": "servicedesksolicitudes",
           "action": "display",
           "title": "{{flpTitle}}",
           "signature": {
@@ -73,7 +73,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "servicedesk.solicutides.i18n.i18n"
+          "bundleName": "servicedesk.solicitudes.i18n.i18n"
         }
       },
       "": {
@@ -131,7 +131,8 @@
               "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
-                    "type": "ResponsiveTable"
+                    "type": "ResponsiveTable",
+                    "enableExport": true
                   }
                 }
               },
@@ -159,12 +160,11 @@
                   "tableSettings": {
                     "creationMode": {
                       "name": "Inline"
-                    },
-                    "enableExport": true,
-                    "type": "ResponsiveTable"
+                    }
                   }
                 }
-              }
+              },
+              "variantManagement": "Control"
             }
           }
         },

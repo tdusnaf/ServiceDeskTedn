@@ -22,9 +22,12 @@ class ServiceDeskService extends cds.ApplicationService {
 
   /** Custom Validation */
   async onUpdate (req) {
-    const { Estado_code } = await SELECT.one(req.subject, i => i.Estado_code).where({ID: req.data.ID})
-    if ( Estado_code === 'C')
-      return req.reject(`No se puede modificar una solicitud cerrada`)
+    const rol = await req.user;
+    if(rol.roles.User){
+        const { Estado_code } = await SELECT.one(req.subject, i => i.Estado_code).where({ID: req.data.ID})
+        if ( Estado_code === 'C')
+        return req.reject(`No se puede modificar una solicitud cerrada`)
+    } 
   }
 }
 module.exports = { ServiceDeskService }

@@ -27,7 +27,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"ServiceDeskService","DetailsURL":"./service/ServiceDeskSvcs/","Metadata":"./service/ServiceDeskSvcs/$metadata","Entities":[{"Name":"Solicitudes","URL":"./service/ServiceDeskSvcs/Solicitudes","FioriURL":"$fiori-preview/ServiceDeskService/Solicitudes#preview-app"},{"Name":"Tipo_solicitud","URL":"./service/ServiceDeskSvcs/Tipo_solicitud","FioriURL":"$fiori-preview/ServiceDeskService/Tipo_solicitud#preview-app"}],"EntitiesCount":2}]}
+                            const data = {"Services":[{"ServiceName":"ServiceDeskService","DetailsURL":"./service/ServiceDeskSvcs/","Metadata":"./service/ServiceDeskSvcs/$metadata","Entities":[{"Name":"Solicitudes","URL":"./service/ServiceDeskSvcs/Solicitudes","FioriURL":"$fiori-preview/ServiceDeskService/Solicitudes#preview-app"},{"Name":"Tipos_solicitud","URL":"./service/ServiceDeskSvcs/Tipos_solicitud","FioriURL":"$fiori-preview/ServiceDeskService/Tipos_solicitud#preview-app"}],"EntitiesCount":2}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });

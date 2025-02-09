@@ -3,7 +3,7 @@ sap.ui.define(
     function (Component) {
         "use strict";
 
-        return Component.extend("servicedesk.solicutides.Component", {
+        return Component.extend("servicedesk.tiposdesolicitud.Component", {
             metadata: {
                 manifest: "json"
             }
