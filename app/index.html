@@ -27,7 +27,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"ServiceDeskService","DetailsURL":"./service/ServiceDeskSvcs/","Metadata":"./service/ServiceDeskSvcs/$metadata","Entities":[{"Name":"Solicitudes","URL":"./service/ServiceDeskSvcs/Solicitudes","FioriURL":"$fiori-preview/ServiceDeskService/Solicitudes#preview-app"},{"Name":"Tipos_solicitud","URL":"./service/ServiceDeskSvcs/Tipos_solicitud","FioriURL":"$fiori-preview/ServiceDeskService/Tipos_solicitud#preview-app"}],"EntitiesCount":2}]}
+                            const data = {"Services":[{"ServiceName":"ServiceDeskAdminService","DetailsURL":"./odata/v4/service-desk-admin/","Metadata":"./odata/v4/service-desk-admin/$metadata","Entities":[{"Name":"Solicitudes","URL":"./odata/v4/service-desk-admin/Solicitudes","FioriURL":"$fiori-preview/ServiceDeskAdminService/Solicitudes#preview-app"},{"Name":"Tipos_solicitud","URL":"./odata/v4/service-desk-admin/Tipos_solicitud","FioriURL":"$fiori-preview/ServiceDeskAdminService/Tipos_solicitud#preview-app"}],"EntitiesCount":2},{"ServiceName":"ServiceDeskUserService","DetailsURL":"./odata/v4/service-desk-user/","Metadata":"./odata/v4/service-desk-user/$metadata","Entities":[{"Name":"Solicitudes","URL":"./odata/v4/service-desk-user/Solicitudes","FioriURL":"$fiori-preview/ServiceDeskUserService/Solicitudes#preview-app"},{"Name":"Tipos_solicitud","URL":"./odata/v4/service-desk-user/Tipos_solicitud","FioriURL":"$fiori-preview/ServiceDeskUserService/Tipos_solicitud#preview-app"}],"EntitiesCount":2}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });

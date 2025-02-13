@@ -1,0 +1,190 @@
+{
+  "_version": "1.60.0",
+  "sap.app": {
+    "id": "servicedesk.solicitudesuser",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.16.3",
+      "toolsId": "06acb5cb-d77f-4f54-a0b8-70b5499f3416"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/service-desk-user/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "servicedesksolicitudesuser-display": {
+          "semanticObject": "servicedesksolicitudesuser",
+          "action": "display",
+          "title": "{{flpTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.120.13",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.fe.templates": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "servicedesk.solicitudesuser.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "SolicitudesList",
+          "target": "SolicitudesList"
+        },
+        {
+          "pattern": "Solicitudes({key}):?query:",
+          "name": "SolicitudesObjectPage",
+          "target": "SolicitudesObjectPage"
+        },
+        {
+          "pattern": "Solicitudes({key})/Comunicaciones({key2}):?query:",
+          "name": "Solicitudes_ComunicacionesObjectPage",
+          "target": "Solicitudes_ComunicacionesObjectPage"
+        }
+      ],
+      "targets": {
+        "SolicitudesList": {
+          "type": "Component",
+          "id": "SolicitudesList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "contextPath": "/Solicitudes",
+              "variantManagement": "Control",
+              "navigation": {
+                "Solicitudes": {
+                  "detail": {
+                    "route": "SolicitudesObjectPage"
+                  }
+                }
+              },
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable",
+                    "enableExport": true
+                  }
+                }
+              },
+              "initialLoad": "Enabled"
+            }
+          }
+        },
+        "SolicitudesObjectPage": {
+          "type": "Component",
+          "id": "SolicitudesObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/Solicitudes",
+              "navigation": {
+                "Comunicaciones": {
+                  "detail": {
+                    "route": "Solicitudes_ComunicacionesObjectPage"
+                  }
+                }
+              },
+              "controlConfiguration": {
+                "Comunicaciones/@com.sap.vocabularies.UI.v1.LineItem#Comunicaciones": {
+                  "tableSettings": {
+                    "enableExport": true,
+                    "type": "ResponsiveTable",
+                    "creationMode": {
+                      "name": "Inline"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Solicitudes_ComunicacionesObjectPage": {
+          "type": "Component",
+          "id": "Solicitudes_ComunicacionesObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/Solicitudes/Comunicaciones"
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
+}

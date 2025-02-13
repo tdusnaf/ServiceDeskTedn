@@ -1,8 +1,6 @@
-ID;createdAt;createdBy;modifiedAt;modifiedBy;Motivo;Estado_code;TipoSolicitud_code;Urgencia_code;PersonaSoporte_ID;Usuario
-88d60bda-64a4-4879-b57f-f455bbc65fa3;2025-02-08T10:20:12+0100;alice;2025-02-08T10:20:12+0100;modifiedBy9130;Motivo de prueba;N;Doc;H;;Usuario8619
-d928bec5-5076-4010-b09b-fd94dbf02c4f;2025-02-08T10:20:53+0100;alice;2025-02-08T10:20:53+0100;modifiedBy4774;Motivo7211;A;Inc;L;;Usuario1812
-2816c0af-8ee1-4790-849d-de90e3ed52e3;2025-02-08T10:20:54+0100;createdBy9271;2025-02-08T10:20:54+0100;modifiedBy4240;Motivo329;I;Doc;H;;Usuario6389
-17b59653-344d-42ba-b8c4-e9cf0405154e;2025-02-08T11:19:55+0100;createdBy5113;2025-02-08T11:19:55+0100;modifiedBy1028;Motivo4479;H;Sup;M;;Usuario5055
-d553ff41-c26a-4579-a8f6-7ff6ceceb929;2025-02-08T11:20:06+0100;createdBy3071;2025-02-08T11:20:06+0100;modifiedBy314;Motivo2459;R;Doc;L;;Usuario9494
-bf29aaae-d57d-4407-94f8-7ab372cf8b34;2025-02-08T11:20:33+0100;createdBy5773;2025-02-08T11:20:33+0100;modifiedBy2929;Motivo2320;C;Inc;M;;Usuario5256
-a6d9ae5d-fb13-46a1-85e8-0e25818dd063;2025-02-09T12:32:42+0100;alice;2025-02-09T12:32:42+0100;modifiedBy1871;Motivo3348;C;Seg;L;;Usuario7918
+ID;createdAt;createdBy;modifiedAt;modifiedBy;Motivo;Estado_code;TipoSolicitud_code;Urgencia_code;Usuario;Asignado_ID
+3efd52b2-56a2-4203-8f53-5c2344f7d528;2025-02-13T01:05:53+0100;alice;2025-02-13T01:05:53+0100;modifiedBy650;Motivo6502;N;Sup;H;Usuario9480;3cc01a34-9e65-4395-a077-1a8483fd0f73
+7f32cdf5-605e-49f7-9125-779059b8bb3c;2025-02-13T01:05:55+0100;createdBy3319;2025-02-13T01:05:55+0100;modifiedBy2814;Motivo3935;H;Doc;L;Usuario5923;0c473dbb-f6e4-46e6-ab95-d56f47099832
+fa49289c-a733-42c0-80a0-e89c086a8016;2025-02-13T01:05:55+0100;alice;2025-02-13T01:05:55+0100;modifiedBy8437;Motivo7614;H;Inc;M;Usuario9946;0c473dbb-f6e4-46e6-ab95-d56f47099832
+aa37deee-d70e-460c-afa5-fa3ad7438fa0;2025-02-13T01:05:55+0100;createdBy247;2025-02-13T01:05:55+0100;modifiedBy9853;Motivo9404;I;Doc;L;Usuario1551;3cc01a34-9e65-4395-a077-1a8483fd0f73
+5f955ec9-e58a-4d6b-8242-d3190e801826;2025-02-13T01:06:06+0100;alice;2025-02-13T01:06:06+0100;modifiedBy7894;Motivo1679;C;Doc;H;Usuario6846;0c473dbb-f6e4-46e6-ab95-d56f47099832

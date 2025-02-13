@@ -1,4 +1,6 @@
 
-using from './servicedesk.solicitudes/annotations';
+using from './servicedesk.solicitudesuser/annotations';
 
-using from './servicedesk.tiposdesolicitud/annotations';
+using from './servicedesk.solicitudesadmin/annotations';
+
+using from './servicedesk.admintipossolic/annotations';

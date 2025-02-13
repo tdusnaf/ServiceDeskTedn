@@ -15,8 +15,8 @@ entity Solicitudes : cuid, managed
     Estado : Association to one Estado default 'N';
     TipoSolicitud : Association to one TiposSolicitud;
     Urgencia : Association to one Urgencia default 'M';
-    PersonaSoporte : Association to one PersonaSoporte;
-    Usuario : type of managed:createdBy;
+    Asignado : Association to one PersonaSoporte;
+    Usuario : String @cds.on.insert: $user;
     Comunicaciones  : Composition of many {
         key ID    : UUID;
         Autor    : type of managed:createdBy;
@@ -30,8 +30,7 @@ entity PersonaSoporte
     key ID : UUID;
     Nombre : String(100);
     Apellido1 : String(100);
-    Apellido2 : String(100);
-    Solicitudes : Association to many Solicitudes on Solicitudes.PersonaSoporte = $self;
+    Apellido2 : String(100);    
 }
 
 entity TiposSolicitud {
